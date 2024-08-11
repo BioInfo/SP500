@@ -53,7 +53,7 @@ While we encourage detailed exploration of AGI concepts, remember that the book 
 
 ## Code of Conduct
 
-By participating in this project, you agree to abide by our [Code of Conduct](link-to-code-of-conduct). Please report unacceptable behavior to [email address].
+By participating in this project, you agree to abide by our [Code of Conduct](link-to-code-of-conduct). Please report unacceptable behavior.
 
 ## Questions?
 
