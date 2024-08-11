@@ -1,6 +1,12 @@
 name: Markdown Linting
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - '**/*.md'
+  pull_request:
+    paths:
+      - '**/*.md'
 
 jobs:
   markdown-lint:
@@ -10,8 +16,8 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16'  # Updated to use Node.js 16
     - name: Install dependencies
-      run: npm install -g markdownlint-cli
+      run: npm install -g markdownlint-cli@0.31.1  # Specify a version known to work
     - name: Run Markdown Linting
       run: markdownlint '**/*.md' --ignore node_modules
