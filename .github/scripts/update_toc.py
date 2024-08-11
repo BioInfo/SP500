@@ -32,7 +32,7 @@ def update_toc():
         relative_path = chapter['file'].replace('chapters/', '')
         toc += f"- [{chapter['title']}]({relative_path})\n"
     
-    with open('README.md', 'r') as f:
+    with open('readme.md', 'r') as f:
         content = f.read()
     
     toc_pattern = r'(# Table of Contents\n)[\s\S]*?(?=\n#|$)'
@@ -41,7 +41,7 @@ def update_toc():
     else:
         updated_content = content + "\n\n" + toc
     
-    with open('README.md', 'w') as f:
+    with open('readme.md', 'w') as f:
         f.write(updated_content)
 
 if __name__ == "__main__":
