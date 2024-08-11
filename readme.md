@@ -10,12 +10,17 @@ Inspired by Nick Bostrom's concept of a "solved world," this project invites con
 
 The book is divided into several parts, each focusing on a different sector of the economy:
 
-- Part I: Technology Sector
-- Part II: Finance Sector
-- Part III: Energy Sector
-- Part IV: Healthcare Sector
-- Part V: Consumer Goods
-- ...
+- Communication Services
+- Consumer Discretionary
+- Consumer Staples
+- Energy
+- Financials
+- Health Care
+- Industrials
+- Information Technology
+- Materials
+- Real Estate
+- Utilities
 
 Each chapter follows a similar structure:
 
