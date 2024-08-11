@@ -1,0 +1,31 @@
+name: Update Table of Contents
+
+on:
+  push:
+    paths:
+      - 'chapters/**/*.md'
+  workflow_dispatch:
+
+jobs:
+  update-toc:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    - name: Update Table of Contents
+      run: |
+        python .github/scripts/update_toc.py
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Update Table of Contents" || echo "No changes to commit"
+        git push
